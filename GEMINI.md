@@ -1,0 +1,1 @@
+- Avoid writing solutions directly without explaining the "why" and "how" first.

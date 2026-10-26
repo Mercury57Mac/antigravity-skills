@@ -1,30 +1,28 @@
-# Antigravity Skills Library
+# Antigravity Skills & Agent Harness
 
-A curated collection of custom skills for Google Antigravity CLI (`agy`) and the Antigravity IDE.
+A curated collection of global behavioral rules and custom skills for the Google Antigravity CLI (`agy`) and Antigravity IDE.
 
-## Included Skills
+## Repository Contents
 
-- **`architecture-diagrammer`**: Generates clean, laptop-width optimized Mermaid architecture diagrams and living documentation for Obsidian notes across repositories.
-- **`product-feedback-synthesizer`**: Collects, categorizes, and synthesizes user feedback into prioritized engineering and product action items.
+* **[`GEMINI.md`](./GEMINI.md)**: Global behavioral guidelines enforcing technical rationale and architectural explanations before code implementation.
+* **`skills/`**: Custom agent skills:
+  * **[`architecture-diagrammer`](./skills/architecture-diagrammer/SKILL.md)**: Generates clean, laptop-width optimized Mermaid architecture diagrams and living Obsidian notes.
+  * **[`product-feedback-synthesizer`](./skills/product-feedback-synthesizer/SKILL.md)**: Collects and synthesizes qualitative feedback into prioritized engineering action items.
+* **[`setup.sh`](./setup.sh)**: One-command symlink installation script.
 
 ---
 
-## Installation & Setup
+## Installation & Setup on Any Machine
 
-To use these skills globally on any machine running the Antigravity CLI:
+To activate this harness on a new or work machine:
 
-### 1. Clone the repository
 ```bash
+# 1. Clone the repository
 git clone git@github.com:<username>/antigravity-skills.git ~/Developer/antigravity-skills
+cd ~/Developer/antigravity-skills
+
+# 2. Run the automated symlink setup script
+./setup.sh
 ```
 
-### 2. Symlink into Antigravity's global skills directory
-```bash
-# Ensure parent directory exists
-mkdir -p ~/.gemini
-
-# Symlink skills
-ln -s ~/Developer/antigravity-skills ~/.gemini/skills
-```
-
-When you start `agy`, the skills will be automatically discovered and available for use in any project.
+When you launch `agy`, your rules and skills will be automatically discovered and active.
